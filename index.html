@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SteamRIP Help Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>SteamRIP Help Notes</h1>
+  <input id="q" type="search" placeholder="Search notes..." autocomplete="off">
+  <button id="addBtn">+ Add note</button>
+  <button id="expBtn">Export</button>
+  <button id="impBtn">Import</button>
+  <input id="impFile" type="file" accept=".json,application/json" hidden>
+</header>
+<div class="wrap">
+  <nav id="nav"></nav>
+  <main id="main"></main>
+</div>
+<dialog id="dlg">
+  <form method="dialog" id="frm">
+    <h2 id="dlgTitle">Add note</h2>
+    <input id="nt" placeholder="Title" required>
+    <div class="cols">
+      <textarea id="nm" placeholder="Write markdown here: # headings, - lists, **bold**, *italic*, `code`, [text](url)" required></textarea>
+      <div id="pv" class="md"></div>
+    </div>
+    <div class="btns">
+      <button type="button" id="cancel">Cancel</button>
+      <button type="submit" id="save">Save</button>
+    </div>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>
